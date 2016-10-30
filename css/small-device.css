@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Adaptive style
+   ========================================================================== */
+
+
+
+@media (min-width: 1300px) {
+    .container-fluid {width: 1262px;}
+}
+
+@media (min-width: 1200px) {
+	.col-10 {margin: 0 0 0 -25%;}
+}
+
+@media (min-width: 992px) {
+    
+    .menu {display: block !important;}
+    .mob-menu {display: none !important;}
+    
+}
+
+
+
+
+
+@media (max-width: 1250px) {
+	body .menu__lnk li {padding: 0 10px 0 0; margin: 0 10px 0 0;}
+	.menu__lnk a.open-submenu {margin: 0 19px 0 0; }
+}
+
+@media (max-width: 1100px) {
+	body .menu__lnk li {font-size: 85%;}
+	.nav-tabs>li>a {padding: 0 15px;}
+	.footer__soc span {display: none;}
+	.footer__menu {margin: 0 51px 0 193px; padding: 28px 0 0 0 !important;}
+}
+
+@media (max-width: 992px) {
+	body .menu__lnk li {font-size: 100%;}
+	.burger {display: block;}
+	.menu {display: none;}
+	.head__info {display: none;}
+	.working-hours {display: none;}
+	.logo {width: auto; margin: 0; text-align: left;}
+	.mob-menu .working-hours {display: block;}
+	.head {height: 77px; margin-bottom: 15px;}
+	.footer__menu li {padding: 0 10px 0 10px;}
+	.wrapper h1, .modal h1 {font-size: 32px;}
+	.wrapper h2, .modal h2 {font-size: 28px;}
+	.wrapper h3, .modal h3 {font-size: 24px;}
+	.wrapper h4, .modal h4 {font-size: 20px;}
+	.wrapper h5, .modal h5 {font-size: 18px;}
+	.logo img {height: 28px;}
+	.logo {padding-top: 30px; padding-left: 0;}
+	.gallery__item a:before {display: none !important;}
+
+}
+
+@media (max-width: 767px) {
+	.wrapper cite {margin-right: 0; padding: 0 25px;}
+	.cite-author {margin-left: 0;}
+	.gallery__item {display: inline-block; padding: 0 15px 15px 0; width: 50%; margin: 0; vertical-align: middle;}
+	.gallery__item img {width: 100%;}
+	.gallery {margin-right: -15px; font-size: 0;}
+	.workarea tr, .workarea td { display: block; }
+	.workarea thead {display: none;}
+	.workarea th {display: none;}
+  	.workarea table td {text-align: right; position: relative; overflow: hidden; font-size: 14px; padding: 5px 0 !important;}
+  	.workarea table tr {border-top: 1px solid #f0eaea; padding: 10px 0;}
+  	.workarea table td:before { content: attr(data-label); float: left; padding-right: 15px; min-width: 45%; text-align: left; font-weight: bold; }
+	body .pagination__item {margin: 0 2px;}
+	body .pagination {height: auto; border: 0;}
+	.pagination__namber {display: block; clear: both; padding: 20px 0 25px;}
+	body .pagination__item.next {float: none;}
+	body .pagination__item.prev {float: none;}
+	body .pagination__namber .pagination__item {height: 22px;}
+	body .pagination__item.active:before {top: 22px;}
+	body a.pagination__item:hover:before {display: none;}
+	.workarea ul {padding: 0 0 0 29px;}
+	.panel-group .panel-body {padding-left: 15px !important;}
+	.nav-tabs>li {display: block; float: none; }
+	.nav-tabs>li a {text-align: center; font-size: 18px;}
+	.footer__menu {margin: 0; clear: both; padding: 10px 0 0 !important; text-align: left;}
+	.footer__menu li {display: block; margin: 0 0 20px !important; padding: 0 !important;}
+	
+
+}
+
+@media (max-width: 450px) {
+	
+}

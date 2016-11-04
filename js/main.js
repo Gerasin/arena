@@ -55,12 +55,14 @@ $(document).ready(function() {
 	$('.input-wrap input').on('focusin', function () {
 		$(this).parent().find('.input-wrap__header').fadeIn();
 		$(this).parent().addClass('active');
+		$(this).attr('placeholder', '');
 	});
 	$('.input-wrap input').on('focusout', function () { 
 		var inputVal = $(this).val().length;
 		if(inputVal == 0) {
 			$(this).parent().find('.input-wrap__header').fadeOut(1);
 			$(this).parent().removeClass('active');
+			$(this).attr('placeholder', $(this).parent().find('.input-wrap__header').text());
 		}
 	});
 
@@ -205,6 +207,12 @@ $(document).ready(function() {
 	    create: true,
 	    sortField: 'text'
 	});
+
+	// map max width
+	mapWidth();
+
+	// min height box info
+	minHeightImg();
 
 
 
@@ -373,7 +381,19 @@ $(document).ready(function() {
 	
 
 })
+function mapWidth() {
+	if($('.map').length) {
+		var mapLeft = -1 * $('.contacts').offset().left;
+		$('.map').css({'margin-left' : mapLeft, 'margin-right' : mapLeft});
+	}
+}
 
+function minHeightImg() {
+	if($('.magazin-info').length) {
+		var minHeightImg = $('.magazin-info').height() + 20;
+		$('.page-img').css({'min-height' : minHeightImg});
+	}
+}
 
 function headerHeight() {
 
@@ -408,7 +428,7 @@ function headerHeight() {
 
 
 function footerHeight() {
-	$('.footer-padding').css({'height' : $('.footer').height() + 61});
+	$('.footer-padding').css({'height' : $('.footer').height() + 30});
 }
 $(window).load(function() {
 
@@ -421,6 +441,8 @@ $(window).resize(function() {
 
 	footerHeight();
 	headerHeight();
+	mapWidth();
+	minHeightImg();
 
 });
 

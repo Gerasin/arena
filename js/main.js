@@ -16,8 +16,11 @@ $(document).ready(function() {
 	$('.corusel').owlCarousel({
     	items:1,
 	    margin:0,
+	    loop:true,
 	    lazyLoad:true,
 	    autoHeight:false,
+	    autoplay:true,
+    	autoplayTimeout:3000,
 	    nav:false
 	});
 	$('.corusel-pointer').owlCarousel({
@@ -27,6 +30,40 @@ $(document).ready(function() {
 	    autoHeight:false,
 	    nav:true
 	});
+
+	$('.carousel-three').owlCarousel({
+    	items:3,
+	    margin:30,
+	    loop:true,
+	    lazyLoad:true,
+	    autoHeight:false,
+	    autoplay:true,
+    	autoplayTimeout:3000,
+	    nav:false,
+	    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        766:{
+            items:3,
+            nav:false
+        }
+    }
+
+	});
+
+	$('.carousel-auto').owlCarousel({
+    	margin:1,
+	    loop:true,
+	    autoWidth:true,
+	    item:3,
+	    autoHeight:false,
+	    autoplay:true,
+    	autoplayTimeout:3000,
+	    nav:false
+	});
+	
 
 	$('.nav-tabs a').on('click', function (e) {
 	  e.preventDefault();
@@ -214,6 +251,19 @@ $(document).ready(function() {
 	// min height box info
 	minHeightImg();
 
+	// main corusel
+	mainCorusel();
+
+	$('.main-coruselbig__list').owlCarousel({
+    	items:1,
+	    margin:0,
+	    loop:true,
+	    lazyLoad:true,
+	    autoHeight:false,
+	    nav:true,
+	    autoplay:true,
+    	autoplayTimeout:3000,
+	});
 
 
 
@@ -395,6 +445,13 @@ function minHeightImg() {
 	}
 }
 
+function mainCorusel() {
+	if($('.main-coruselbig__list').length) {
+		var mapLeft = -1 * $('.main-coruselbig').offset().left;
+		$('.main-coruselbig__width').css({'margin-left' : mapLeft, 'margin-right' : mapLeft});
+	}
+}
+
 function headerHeight() {
 
 	if($('.section-header').length) {
@@ -422,7 +479,6 @@ function headerHeight() {
 			};
 		})
 	}
-
 }
 
 
@@ -443,6 +499,7 @@ $(window).resize(function() {
 	headerHeight();
 	mapWidth();
 	minHeightImg();
+	mainCorusel();
 
 });
 
@@ -454,5 +511,13 @@ $('body').append(
 		<a href="javascript:void(0);" style="float: right;background:#ccc; color:#000; padding: 5px 10px;position:relative;z-index:20; text-decoration:none" onclick="$(this).parent().hide()">Закрыть X</a> \
 	<ol style="padding: 9px 0 7px 30px; margin: 0"> \
 		<li style="margin: 0 0 5px;"><a href="index.html">Index</a></li> \
+		<li style="margin: 0 0 5px;"><a href="typography.html">typography</a></li> \
+		<li style="margin: 0 0 5px;"><a href="kak_doehat.html">kak_doehat</a></li> \
+		<li style="margin: 0 0 5px;"><a href="kino.html">kino</a></li> \
+		<li style="margin: 0 0 5px;"><a href="list.html">list</a></li> \
+		<li style="margin: 0 0 5px;"><a href="news.html">news</a></li> \
+		<li style="margin: 0 0 5px;"><a href="openshop.html">openshop</a></li> \
+		<li style="margin: 0 0 5px;"><a href="page404.html">page404</a></li> \
+		<li style="margin: 0 0 5px;"><a href="shoplist.html">shoplist</a></li> \
 	</ol> \
 </div>');
